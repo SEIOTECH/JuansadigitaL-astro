@@ -23,20 +23,6 @@ jobs:
          - name: Install dependencies
            run: npm ci
 
-         - name: Ensure Cloudflare Project Exists
-           run: npx wrangler pages project create juansadigital-astro --production-branch main || true
-           env:
-              CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-              CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
-         - name: Assign Custom Domains
-           run: |
-              npx wrangler pages domain add juansadigital-astro juansadigital.com || true
-              npx wrangler pages domain add juansadigital-astro dev.juansadigital.com || true
-           env:
-              CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-              CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
          - name: Build
            run: npm run build
 
