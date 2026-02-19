@@ -52,6 +52,21 @@ html {
     color: #000;
     transition: var(--transition-bg), var(--transition-text);
   }
+
+  .jetengine {
+    background-color: #d13627;
+    transition: var(--transition-bg);
+  }
+
+  .elementor {
+    background-color: #92003b;
+    transition: var(--transition-bg);
+  }
+
+  .seo {
+    background-color: #327f54;
+    transition: var(--transition-bg);
+  }
 }
 
 html.dark {
@@ -92,5 +107,18 @@ html.dark {
 
   .firebase {
     background-color: #ffdd88;
+  }
+
+  .jetengine {
+    background-color: #f77062;
+  }
+
+  .elementor {
+    background-color: #e2458c;
+  }
+
+  .seo {
+    background-color: #88ffbb;
+    color: #000;
   }
 }

@@ -72,9 +72,9 @@
     "projects": [
       {
         "title": "Discoverlaguajira.travel",
-        "description": "We developed Discover La Guajira as a modern website, with a vibrant design, clear navigation and dynamic features focused on SEO, highlighting the desert, the sea and the culture.",
+        "description": "We developed Discover La Guajira as a modern website using WordPress, with a vibrant design and dynamic features focused on SEO that highlight the desert and culture.",
         "image": "/src/images/projects/discover-la-guajira-turismo.jpg",
-        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Government Project",
         "codeUrl": "#",
         "preview": "View Website",
@@ -82,23 +82,33 @@
       },
       {
         "title": "Visitvalle.travel",
-        "description": "We developed Visit Valle as an innovative website, with an inspiring design, intuitive layout, and interactive tools focused on SEO, showcasing culture, music, salsa, and magical towns.",
+        "description": "We developed Visit Valle as an innovative website with WordPress and Elementor, showcasing culture, music, and magical towns with a salsa-inspired design.",
         "image": "/src/images/projects/visit-valle-turismo.jpg",
-        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Government Project",
         "codeUrl": "#",
         "preview": "View Case",
         "previewUrl": "https://visitvalle.travel"
       },
       {
-        "title": "Providencia.travel",
-        "description": "We developed Providencia as a modern website, with a fresh design, smooth usability, and optimized functions focused on SEO, reflecting island life, sea, culture, and gastronomy.",
+        "title": "Providenciaisla.travel",
+        "description": "We developed Providencia as a dynamic WordPress website, reflecting island life and culture with search-engine optimized functions and smooth usability.",
         "image": "/src/images/projects/providencia-travel-turismo.jpg",
-        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Government Project",
         "codeUrl": "#",
         "preview": "View Case",
-        "previewUrl": "https://providencia.travel"
+        "previewUrl": "https://providenciaisla.travel"
+      },
+      {
+        "title": "Wiwatour.com",
+        "description": "We developed Wiwa Tour as a comprehensive travel platform showcasing the ancestral culture of the Sierra Nevada. The site features an intuitive booking system and immersive visual storytelling optimized for SEO.",
+        "image": "/src/images/projects/wiwa-tour.jpg",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Travel Platform",
+        "codeUrl": "#",
+        "preview": "View Website",
+        "previewUrl": "https://wiwatour.com"
       }
     ]
   },

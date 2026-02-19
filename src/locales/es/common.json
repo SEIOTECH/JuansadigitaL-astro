@@ -76,9 +76,9 @@
     "projects": [
       {
         "title": "Discoverlaguajira.travel",
-        "description": "Desarrollamos Discover La Guajira como un sitio web moderno, con un diseño vibrante, navegación clara y características dinámicas enfocadas en SEO, resaltando el desierto, el mar y la cultura.",
+        "description": "Desarrollamos Discover La Guajira como un sitio web moderno bajo WordPress, con un diseño vibrante y características dinámicas enfocadas en SEO que resaltan el desierto y la cultura.",
         "image": "/src/images/projects/discover-la-guajira-turismo.jpg",
-        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Proyecto Gubernamental",
         "codeUrl": "#",
         "preview": "Revisar Web",
@@ -86,23 +86,33 @@
       },
       {
         "title": "Visitvalle.travel",
-        "description": "Desarrollamos Visit Valle como un sitio web innovador, con un diseño inspirador, layout intuitivo y herramientas interactivas enfocadas en SEO, destacando la cultura, la música, la salsa y los pueblos mágicos.",
+        "description": "Desarrollamos Visit Valle como un sitio web innovador con WordPress y Elementor, destacando la cultura, la música y los pueblos mágicos con un diseño inspirado en la salsa.",
         "image": "/src/images/projects/visit-valle-turismo.jpg",
-        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Proyecto Gubernamental",
         "codeUrl": "#",
         "preview": "Ver Caso",
         "previewUrl": "https://visitvalle.travel"
       },
       {
-        "title": "Providencia.travel",
-        "description": "Desarrollamos Providencia como un sitio web moderno, con un diseño fresco, usabilidad fluida y funciones optimizadas enfocadas en SEO, reflejando la vida isleña, el mar, la cultura y la gastronomía.",
+        "title": "Providenciaisla.travel",
+        "description": "Desarrollamos Providencia como un sitio web dinámico con WordPress, reflejando la vida isleña y cultura con funciones optimizadas para buscadores y usabilidad fluida.",
         "image": "/src/images/projects/providencia-travel-turismo.jpg",
-        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Proyecto Gubernamental",
         "codeUrl": "#",
         "preview": "Ver Caso",
-        "previewUrl": "https://providencia.travel"
+        "previewUrl": "https://providenciaisla.travel"
+      },
+      {
+        "title": "Wiwatour.com",
+        "description": "Desarrollamos Wiwa Tour como una plataforma integral de viajes que resalta la cultura ancestral de la Sierra Nevada de Santa Marta. El sitio cuenta con un sistema de reservas intuitivo, narrativa visual inmersiva y optimización SEO.",
+        "image": "/src/images/projects/wiwa-tour.jpg",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Plataforma Turística",
+        "codeUrl": "#",
+        "preview": "Ver Web",
+        "previewUrl": "https://wiwatour.com"
       }
     ]
   },
