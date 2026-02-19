@@ -31,7 +31,7 @@ jobs:
 
          - name: Assign Custom Domains
            run: |
-              npx wrangler pages domain add juansadigital-astro juansa.connexis.co || true
+              npx wrangler pages domain add juansadigital-astro juansadigital.com || true
               npx wrangler pages domain add juansadigital-astro dev.juansadigital.com || true
            env:
               CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
