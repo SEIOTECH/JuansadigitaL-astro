@@ -20,11 +20,11 @@
     }
   ],
   "hero": {
-    "job_availability": "First Tourism Marketing Agency in Santa Marta!",
+    "job_availability": "Tourism Marketing Strategist in Santa Marta",
     "title": "JuanSa Digital",
-    "job_title": "<strong>Marketing and Web Development Agency</strong> in Santa Marta, Colombia.",
-    "description": "Specialists in boosting tourism businesses such as hotels, travel agencies, tour operators and destinations.",
-    "cta": "Contact us"
+    "job_title": "<strong>Marketing Consulting & Web Development</strong> in Santa Marta, Colombia.",
+    "description": "Specialist in boosting tourism businesses such as hotels, travel agencies, tour operators and destinations.",
+    "cta": "Contact me"
   },
   "experience": {
     "title": "Main Services",
@@ -148,9 +148,9 @@
     ]
   },
   "about": {
-    "title": "About Us",
-    "subtitle": "First Tourism Marketing Agency in Santa Marta dedicated to boosting Tourism",
-    "description": "We are a marketing and web development agency specialized in tourism, dedicated to boosting tourism businesses such as hotels, travel agencies, tour operators and destinations. We are experts in designing digital strategies and developing websites that increase visibility, generate bookings and retain customers, combining creativity, technology and deep knowledge of the sector."
+    "title": "About me",
+    "subtitle": "Personal Brand specialized in Tourism Marketing and Web Development",
+    "description": "I am a marketing strategist and web developer specialized in tourism, dedicated to boosting tourism businesses such as hotels, travel agencies, tour operators and destinations. I am an expert in designing digital strategies and developing websites that increase visibility, generate bookings and retain customers, combining creativity, technology and deep knowledge of the sector."
   },
   "contact": {
     "title": "Ready to boost your tourism business?",
