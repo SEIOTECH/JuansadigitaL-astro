@@ -17,7 +17,7 @@
     "url": "https://github.com/jpmisat/juansadigital.com.git"
   },
   "license": "MIT",
-  "author": "JuansaDigital <contacto@juansadigital.com>",
+  "author": "JuansaDigital <info@juansadigital.com>",
   "type": "module",
   "scripts": {
     "astro": "astro",
