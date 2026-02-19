@@ -124,8 +124,28 @@
         "alt": "Tornus Agency",
         "title": "Tornus.agency",
         "description": "Desarrollamos el sitio de Tornus como la cara digital de una agencia de placebranding y estudio creativo, con estrategias de branded content y producción enfocada en identidad y storytelling.",
-        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "repo": "https://tornus.agency",
+        "repo_label": "Ver Web",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/projects/discover-la-guajira-turismo.jpg",
+        "alt": "Chez Boaz Tours",
+        "title": "Chezboaztours.com",
+        "description": "Sitio web especializado en tours personalizados, con un diseño elegante y optimización para la conversión de clientes internacionales.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://chezboaztours.com/",
+        "repo_label": "Ver Web",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/projects/visit-valle-turismo.jpg",
+        "alt": "Ciudad Perdida Santa Marta",
+        "title": "Ciudadperdidasantamarta.com",
+        "description": "Plataforma dedicada a uno de los destinos más icónicos de Colombia, con enfoque en la experiencia de usuario y posicionamiento orgánico.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://ciudadperdidasantamarta.com/",
         "repo_label": "Ver Web",
         "commits": "#"
       }
