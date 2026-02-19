@@ -17,6 +17,11 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: 'viewport'
   },
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: 'manual'
+  },
   compressHTML: false,
   integrations: [
     icon(),
@@ -37,7 +42,8 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'es',
         locales: {
-          es: 'es'
+          es: 'es',
+          en: 'en'
         }
       },
       // Remove trailing slash
