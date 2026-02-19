@@ -7,6 +7,7 @@ import Favicons from '@components/Favicons.astro'
 import Footer from '@components/Footer.astro'
 import Navbar from '@components/Navbar.astro'
 import Social from '@components/Social.astro'
+import SEO from '@components/SEO.astro'
 import 'sanitize.css'
 import 'sanitize.css/assets.css'
 import 'sanitize.css/typography.css'
@@ -134,15 +135,18 @@ const { title, description, metaRobots } = options
       }
     </script>
 
+    <SEO
+      title={title}
+      description={description}
+    />
+
     <slot name="preload" />
 
     <slot name="defer-script" />
 
     <meta name="robots" content={metaRobots || 'index, follow'} />
-    {description && <meta name="description" content={description} />}
-    {description && <link href={Astro.url.href} rel="canonical" />}
     <I18NHead />
-    <meta name="author" content="Felix Icaza - https://felixicaza.com" />
+    <meta name="author" content="JuansaDigital - https://juansadigital.com" />
     <meta name="generator" content={Astro.generator} />
 
     {
@@ -150,17 +154,15 @@ const { title, description, metaRobots } = options
         <Schema
           item={{
             '@context': 'https://schema.org',
-            '@type': 'Person',
-            name: 'Felix Icaza',
-            url: 'https://felixicaza.com',
-            image: 'https://felixicaza.com/img/felixicaza.jpg',
+            '@type': 'Organization',
+            name: 'JuansaDigital',
+            url: 'https://juansadigital.com',
+            logo: 'https://juansadigital.com/logo.png',
             sameAs: [
-              'https://felixicaza.com',
-              'https://www.upwork.com/freelancers/felixicaza',
-              'https://www.linkedin.com/in/felixicaza',
-              'https://github.com/felixicaza'
+              'https://www.linkedin.com/company/juansadigital',
+              'https://github.com/jpmisat'
             ],
-            jobTitle: 'Desarrollador Web Frontend'
+            description: description
           }}
         />
       )

@@ -8,17 +8,13 @@ import Contributions from '@pages/_home/Contributions.astro'
 import Experience from '@pages/_home/Experience.astro'
 import Hero from '@pages/_home/Hero.astro'
 import Projects from '@pages/_home/Projects.astro'
-import OpenGraph from '@components/OpenGraph.astro'
 
 const options = {
   title: t('common:title'),
   description: t('common:description')
 }
 ---
-
 <Layout options={options}>
-  <OpenGraph information={options} image=`${URL}/og/unicorn-sparkle-og.png` />
-
   <main>
     <Hero />
     <Experience />
