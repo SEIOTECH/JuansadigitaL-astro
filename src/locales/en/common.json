@@ -73,7 +73,7 @@
       {
         "title": "Discoverlaguajira.travel",
         "description": "We developed Discover La Guajira as a modern website using WordPress, with a vibrant design and dynamic features focused on SEO that highlight the desert and culture.",
-        "image": "/src/images/projects/discover-la-guajira-turismo.jpg",
+        "image": "/src/images/projects/discover-la-guajira-turismo.png",
         "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Government Project",
         "codeUrl": "#",
@@ -83,7 +83,7 @@
       {
         "title": "Visitvalle.travel",
         "description": "We developed Visit Valle as an innovative website with WordPress and Elementor, showcasing culture, music, and magical towns with a salsa-inspired design.",
-        "image": "/src/images/projects/visit-valle-turismo.jpg",
+        "image": "/src/images/projects/visit-valle-turismo.png",
         "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Government Project",
         "codeUrl": "#",
@@ -93,7 +93,7 @@
       {
         "title": "Providenciaisla.travel",
         "description": "We developed Providencia as a dynamic WordPress website, reflecting island life and culture with search-engine optimized functions and smooth usability.",
-        "image": "/src/images/projects/providencia-travel-turismo.jpg",
+        "image": "/src/images/projects/providencia.png",
         "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Government Project",
         "codeUrl": "#",
@@ -103,7 +103,7 @@
       {
         "title": "Wiwatour.com",
         "description": "We developed Wiwa Tour as a comprehensive travel platform showcasing the ancestral culture of the Sierra Nevada. The site features an intuitive booking system and immersive visual storytelling optimized for SEO.",
-        "image": "/src/images/projects/wiwa-tour.jpg",
+        "image": "/src/images/projects/wiwa-tour.png",
         "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
         "code": "Travel Platform",
         "codeUrl": "#",
@@ -116,7 +116,7 @@
     "title": "More Projects",
     "contributions": [
       {
-        "src": "/src/images/contributions/advanced-periodontics.jpg",
+        "src": "/src/images/contributions/tornus.png",
         "alt": "Tornus Agency",
         "title": "Tornus.agency",
         "description": "We developed the Tornus site as the digital face of a placebranding agency and creative studio, with branded content strategies and production focused on identity and storytelling.",
@@ -126,7 +126,7 @@
         "commits": "#"
       },
       {
-        "src": "/src/images/contributions/discover-la-guajira-turismo.jpg",
+        "src": "/src/images/contributions/chez boaz.png",
         "alt": "Chez Boaz Tours",
         "title": "Chezboaztours.com",
         "description": "Website specializing in custom tours, with an elegant design and optimized for international customer conversion.",
@@ -136,7 +136,7 @@
         "commits": "#"
       },
       {
-        "src": "/src/images/contributions/visit-valle-turismo.jpg",
+        "src": "/src/images/contributions/ciudad perdida.png",
         "alt": "Lost City Santa Marta",
         "title": "Ciudadperdidasantamarta.com",
         "description": "Platform dedicated to one of Colombia's most iconic destinations, focusing on user experience and organic positioning.",
