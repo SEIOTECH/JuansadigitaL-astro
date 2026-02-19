@@ -1,0 +1,118 @@
+{
+  "title": "Marketing and Web Development Agency - JuansaDigital",
+  "description": "JuansaDigital, agency specialized in Tourism Marketing and Web Development in Santa Marta, Colombia. We boost hotels, travel agencies and tourist destinations.",
+  "navbar": [
+    {
+      "label": "Home",
+      "href": "#top"
+    },
+    {
+      "label": "Services",
+      "href": "/en/#work-experience"
+    },
+    {
+      "label": "Projects",
+      "href": "/en/#projects"
+    },
+    {
+      "label": "About us",
+      "href": "/en/#about-me"
+    }
+  ],
+  "hero": {
+    "job_availability": "First Tourism Marketing Agency in Santa Marta!",
+    "title": "JuanSa Digital",
+    "job_title": "<strong>Marketing and Web Development Agency</strong> in Santa Marta, Colombia.",
+    "description": "Specialists in boosting tourism businesses such as hotels, travel agencies, tour operators and destinations.",
+    "cta": "Contact us"
+  },
+  "experience": {
+    "title": "Main Services",
+    "jobs": {
+      "jobs_title": ["Digital Marketing", "Web Development", "Market Analysis"],
+      "jobs_description": [
+        {
+          "title": "Tourism Digital Marketing",
+          "time": ["2020"],
+          "description": "We design complete digital strategies for the tourism sector. From social media advertising campaigns and Google Ads to content management and SEO positioning, we help hotels, travel agencies and tour operators increase their online visibility and generate more bookings.",
+          "list": ["Social Media Campaigns", "Google Ads & SEM", "Email Marketing", "SEO Positioning"]
+        },
+        {
+          "title": "Web Development for Tourism",
+          "time": ["2020"],
+          "description": "We create modern, optimized and conversion-focused websites for tourism businesses. We develop platforms with responsive design, intuitive navigation, booking system integration and search engine optimization, combining creativity with cutting-edge technology.",
+          "list": ["Responsive Web Design", "Performance Optimization", "Booking Integration", "Technical SEO"]
+        },
+        {
+          "title": "Tourism Market Analysis",
+          "time": ["2020"],
+          "description": "We perform comprehensive tourism market analyses to identify growth opportunities. We evaluate competition, sector trends, consumer behavior and key metrics to define effective strategies that maximize return on investment.",
+          "list": ["Competition Research", "Trend Analysis", "Metrics & KPIs", "Growth Strategies"]
+        }
+      ]
+    }
+  },
+  "projects": {
+    "title": "Success Cases",
+    "projects": [
+      {
+        "title": "Discoverlaguajira.travel",
+        "description": "We developed Discover La Guajira as a modern website, with a vibrant design, clear navigation and dynamic features focused on SEO, highlighting the desert, the sea and the culture.",
+        "image": "/src/images/projects/esteli-buses-project.jpg",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "code": "Government Project",
+        "preview": "View Website"
+      },
+      {
+        "title": "Visitvalle.travel",
+        "description": "We developed Visit Valle as an innovative website, with an inspiring design, intuitive layout, and interactive tools focused on SEO, showcasing culture, music, salsa, and magical towns.",
+        "image": "/src/images/projects/ana-rangel-portafolio.jpg",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "code": "Government Project",
+        "preview": "View Case"
+      },
+      {
+        "title": "Providencia.travel",
+        "description": "We developed Providencia as a modern website, with a fresh design, smooth usability, and optimized functions focused on SEO, reflecting island life, sea, culture, and gastronomy.",
+        "image": "/src/images/projects/calculadora-payoneer-project.jpg",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "code": "Government Project",
+        "preview": "View Case"
+      }
+    ]
+  },
+  "contributions": {
+    "title": "More Projects",
+    "contributions": [
+      {
+        "src": "/src/images/contributions/advanced-periodontics.jpg",
+        "alt": "Tornus Agency",
+        "title": "Tornus.agency",
+        "description": "We developed the Tornus site as the digital face of a placebranding agency and creative studio, with branded content strategies and production focused on identity and storytelling.",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "repo": "https://tornus.agency",
+        "repo_label": "View Website",
+        "commits": "#"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "First Tourism Marketing Agency in Santa Marta dedicated to boosting Tourism",
+    "description": "We are a marketing and web development agency specialized in tourism, dedicated to boosting tourism businesses such as hotels, travel agencies, tour operators and destinations. We are experts in designing digital strategies and developing websites that increase visibility, generate bookings and retain customers, combining creativity, technology and deep knowledge of the sector."
+  },
+  "contact": {
+    "title": "Ready to boost your tourism business?",
+    "subtitle": "Contact us and let's take your project to the next level"
+  },
+  "footer": {
+    "designed": {
+      "designed_with": "Designed with",
+      "designed_by": "by"
+    },
+    "developed": {
+      "developed_with": "Made with",
+      "developed_by": "by JuansaDigital"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "title": "Agencia de Marketing y Desarrollo Web - JuansaDigital",
+  "description": "JuansaDigital, agencia especializada en Marketing Turístico y Desarrollo Web en Santa Marta, Colombia. Impulsamos hoteles, agencias de viajes y destinos turísticos.",
+  "navbar": [
+    {
+      "label": "Inicio",
+      "href": "#top"
+    },
+    {
+      "label": "Servicios",
+      "href": "#experiencia-laboral"
+    },
+    {
+      "label": "Proyectos",
+      "href": "#proyectos"
+    },
+    {
+      "label": "Nosotros",
+      "href": "#sobre-mi"
+    }
+  ],
+  "hero": {
+    "job_availability": "¡Primera Agencia de Marketing Turístico en Santa Marta!",
+    "title": "JuanSa Digital",
+    "job_title": "<strong>Agencia de Marketing y Desarrollo Web</strong> en Santa Marta, Colombia.",
+    "description": "Especialistas en impulsar negocios turísticos como hoteles, agencias de viajes, operadores de tours y destinos.",
+    "cta": "Contáctanos"
+  },
+  "experience": {
+    "title": "Servicios Principales",
+    "jobs": {
+      "jobs_title": ["Marketing Digital", "Desarrollo Web", "Análisis de Mercado"],
+      "jobs_description": [
+        {
+          "title": "Marketing Digital Turístico",
+          "time": ["2020"],
+          "description": "Diseñamos estrategias digitales completas para el sector turístico. Desde campañas de publicidad en redes sociales y Google Ads hasta gestión de contenido y posicionamiento SEO, ayudamos a hoteles, agencias de viajes y operadores de tours a aumentar su visibilidad online y generar más reservas.",
+          "list": ["Campañas en Redes Sociales", "Google Ads & SEM", "Email Marketing", "Posicionamiento SEO"]
+        },
+        {
+          "title": "Desarrollo Web para Turismo",
+          "time": ["2020"],
+          "description": "Creamos sitios web modernos, optimizados y enfocados en conversión para empresas turísticas. Desarrollamos plataformas con diseño responsivo, navegación intuitiva, integración de sistemas de reservas y optimización para buscadores, combinando creatividad con tecnología de vanguardia.",
+          "list": ["Diseño Web Responsivo", "Optimización de Rendimiento", "Integración de Reservas", "SEO Técnico"]
+        },
+        {
+          "title": "Análisis de Mercado Turístico",
+          "time": ["2020"],
+          "description": "Realizamos análisis exhaustivos del mercado turístico para identificar oportunidades de crecimiento. Evaluamos la competencia, tendencias del sector, comportamiento del consumidor y métricas clave para definir estrategias efectivas que maximicen el retorno de inversión.",
+          "list": ["Investigación de Competencia", "Análisis de Tendencias", "Métricas y KPIs", "Estrategias de Crecimiento"]
+        }
+      ]
+    }
+  },
+  "projects": {
+    "title": "Casos de Éxito",
+    "projects": [
+      {
+        "title": "Discoverlaguajira.travel",
+        "description": "Desarrollamos Discover La Guajira como un sitio web moderno, con un diseño vibrante, navegación clara y características dinámicas enfocadas en SEO, resaltando el desierto, el mar y la cultura.",
+        "image": "/src/images/projects/esteli-buses-project.jpg",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "code": "Proyecto Gubernamental",
+        "preview": "Revisar Web"
+      },
+      {
+        "title": "Visitvalle.travel",
+        "description": "Desarrollamos Visit Valle como un sitio web innovador, con un diseño inspirador, layout intuitivo y herramientas interactivas enfocadas en SEO, destacando la cultura, la música, la salsa y los pueblos mágicos.",
+        "image": "/src/images/projects/ana-rangel-portafolio.jpg",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "code": "Proyecto Gubernamental",
+        "preview": "Ver Caso"
+      },
+      {
+        "title": "Providencia.travel",
+        "description": "Desarrollamos Providencia como un sitio web moderno, con un diseño fresco, usabilidad fluida y funciones optimizadas enfocadas en SEO, reflejando la vida isleña, el mar, la cultura y la gastronomía.",
+        "image": "/src/images/projects/calculadora-payoneer-project.jpg",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "code": "Proyecto Gubernamental",
+        "preview": "Ver Caso"
+      }
+    ]
+  },
+  "contributions": {
+    "title": "Más Proyectos",
+    "contributions": [
+      {
+        "src": "/src/images/contributions/advanced-periodontics.jpg",
+        "alt": "Tornus Agency",
+        "title": "Tornus.agency",
+        "description": "Desarrollamos el sitio de Tornus como la cara digital de una agencia de placebranding y estudio creativo, con estrategias de branded content y producción enfocada en identidad y storytelling.",
+        "techs": ["Astro", "CSS", "JavaScript", "SEO"],
+        "repo": "https://tornus.agency",
+        "repo_label": "Ver Web",
+        "commits": "#"
+      }
+    ]
+  },
+  "about": {
+    "title": "Nosotros",
+    "subtitle": "Primera Agencia de Marketing Turístico en Santa Marta dedicada a impulsar el Turismo",
+    "description": "Somos una agencia de marketing y desarrollo web especializada en turismo, dedicada a impulsar negocios turísticos como hoteles, agencias de viajes, operadores de tours y destinos. Somos expertos en diseñar estrategias digitales y desarrollar sitios web que aumentan la visibilidad, generan reservas y fidelizan clientes, combinando creatividad, tecnología y conocimiento profundo del sector."
+  },
+  "contact": {
+    "title": "¿Listo para impulsar tu negocio turístico?",
+    "subtitle": "Contáctanos y llevemos tu proyecto al siguiente nivel"
+  },
+  "footer": {
+    "designed": {
+      "designed_with": "Diseñado con",
+      "designed_by": "por"
+    },
+    "developed": {
+      "developed_with": "Hecho con",
+      "developed_by": "por JuansaDigital"
+    }
+  }
+}
