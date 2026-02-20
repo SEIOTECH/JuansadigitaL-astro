@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content'
 import { Icon } from 'astro-icon/components'
 import { getLocale, t } from 'i18n:astro'
 import ToggleSwitch from '@components/ToggleSwitch.astro'
@@ -6,6 +7,30 @@ import ToggleSwitch from '@components/ToggleSwitch.astro'
 // Obtenemos los enlaces de la navegación de locales
 const links = t('navbar', { returnObjects: true })
 const locale = getLocale()
+
+// Lógica para detectar si estamos en un post de blog y buscar su traducción
+const pathname = Astro.url.pathname
+let translatedPath = null
+
+if (pathname.includes('/blog/')) {
+  const currentSlug = pathname.split('/blog/')[1].replace(/\/$/, '')
+  const allPosts = await getCollection('blog')
+  const currentPost = allPosts.find((p) => p.slug === currentSlug)
+
+  if (currentPost?.data.reference) {
+    const translatedPost = allPosts.find(
+      (p) =>
+        p.data.reference === currentPost.data.reference &&
+        p.data.lang !== locale
+    )
+
+    if (translatedPost) {
+      translatedPath = translatedPost.data.lang === 'es'
+        ? `/blog/${translatedPost.slug}`
+        : `/en/blog/${translatedPost.slug}`
+    }
+  }
+}
 ---
 
 <nav id="menu">
@@ -34,11 +59,11 @@ const locale = getLocale()
     <li>
       <a
         class="language"
-        href={Astro.url.pathname.includes('/en')
+        href={translatedPath || (Astro.url.pathname.includes('/en')
           ? Astro.url.pathname.replace('/en', '') || '/'
           : Astro.url.pathname === '/'
             ? '/en'
-            : `/en${Astro.url.pathname}`}
+            : `/en${Astro.url.pathname}`)}
       >
         <span>
           <Icon name="language" size={18} />

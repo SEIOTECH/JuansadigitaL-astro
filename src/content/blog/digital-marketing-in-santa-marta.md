@@ -4,6 +4,7 @@ description: 'Discover how digital marketing in Santa Marta can transform your h
 pubDate: 2026-02-20
 heroImage: '../../images/blog/marketing digital en santa marta.png'
 lang: 'en'
+reference: 'marketing-santa-marta'
 ---
 
 # Digital Marketing in Santa Marta: The Engine of Modern Tourism
