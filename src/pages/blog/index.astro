@@ -1,14 +1,17 @@
 ---
 import { getCollection } from 'astro:content'
+import { getLocale, t } from 'i18n:astro'
+import { Image } from 'astro:assets'
 import Layout from '@layouts/Layout.astro'
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-)
+const locale = getLocale()
+const posts = (await getCollection('blog'))
+	.filter((post) => post.data.lang === locale)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
 const options = {
 	title: `Blog | JuansaDigital`,
-	description: `Artículos sobre Marketing Digital, Desarrollo Web y Turismo en Santa Marta.`
+	description: t('common:description')
 }
 ---
 
@@ -16,7 +19,11 @@ const options = {
 	<main>
 		<header>
 			<h1>Blog</h1>
-			<p class="headline-4">Explora nuestros artículos sobre tecnología y marketing turístico.</p>
+			<p class="headline-4">
+				{locale === 'es'
+					? 'Explora nuestros artículos sobre tecnología y marketing turístico.'
+					: 'Explore our articles on technology and tourism marketing.'}
+			</p>
 		</header>
 
 		<section class="posts-grid">
@@ -25,13 +32,13 @@ const options = {
 					<article class="post-card">
 						<a href={`/blog/${post.slug}`}>
 							{post.data.heroImage && (
-								<img src={post.data.heroImage} alt={post.data.title} />
+								<Image src={post.data.heroImage} alt={post.data.title} width={400} height={250} />
 							)}
 							<div class="content">
 								<h2>{post.data.title}</h2>
 								<p>{post.data.description}</p>
 								<time datetime={post.data.pubDate.toISOString()}>
-									{post.data.pubDate.toLocaleDateString('es-ES', {
+									{post.data.pubDate.toLocaleDateString(locale === 'es' ? 'es-ES' : 'en-US', {
 										year: 'numeric',
 										month: 'long',
 										day: 'numeric',

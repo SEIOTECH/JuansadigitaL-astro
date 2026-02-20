@@ -1,22 +1,24 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { switchLocalePath, t } from 'i18n:astro'
+import { switchLocalePath, getLocale, t } from 'i18n:astro'
 import ToggleSwitch from '@components/ToggleSwitch.astro'
 
 // Obtenemos los enlaces de la navegación de locales
 const links = t('navbar', { returnObjects: true })
+const locale = getLocale()
 ---
 
 <nav id="menu">
   <ul>
     {
       links.map(({ label, href }) => {
-        const isActive = Astro.url.pathname === href ||
+        const localizedHref = href.startsWith('#') ? href : (locale === 'es' ? href : `/${locale}${href}`)
+        const isActive = Astro.url.pathname === localizedHref ||
                         (href.startsWith('#') && Astro.url.pathname.length <= 4)
 
         return (
           <li>
-            <a class:list={{ active: isActive }} href={href}>
+            <a class:list={{ active: isActive }} href={localizedHref}>
               {label}
             </a>
           </li>
@@ -50,9 +52,10 @@ const links = t('navbar', { returnObjects: true })
 <dialog>
   <nav>
     {links.map(({ label, href }) => {
-      const isActive = Astro.url.pathname === href ||
+      const localizedHref = href.startsWith('#') ? href : (locale === 'es' ? href : `/${locale}${href}`)
+      const isActive = Astro.url.pathname === localizedHref ||
                       (href.startsWith('#') && Astro.url.pathname.length <= 4)
-      return <a href={href} class:list={{ active: isActive }}>{label}</a>
+      return <a href={localizedHref} class:list={{ active: isActive }}>{label}</a>
     })}
     <a
       class="language"

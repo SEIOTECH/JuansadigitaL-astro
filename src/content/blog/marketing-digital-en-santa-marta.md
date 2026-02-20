@@ -2,7 +2,8 @@
 title: 'Marketing Digital en Santa Marta: Impulsa tu Negocio Turístico'
 description: 'Descubre cómo el marketing digital en Santa Marta puede transformar tu hotel o agencia de viajes. Estrategias SEO, redes sociales y más con JuansaDigital.'
 pubDate: 2026-02-20
-heroImage: '/src/images/projects/wiwa-tour.png'
+heroImage: '../../images/blog/marketing digital en santa marta.png'
+lang: 'es'
 ---
 
 # Marketing Digital en Santa Marta: El Motor del Turismo Moderno
