@@ -18,6 +18,7 @@ interface Options {
   title: string
   description: string
   metaRobots?: string
+  image?: string
 }
 
 interface Props {
@@ -147,6 +148,7 @@ const { title, description, metaRobots } = options
     <SEO
       title={title}
       description={description}
+      image={options.image}
     />
 
     <slot name="preload" />
