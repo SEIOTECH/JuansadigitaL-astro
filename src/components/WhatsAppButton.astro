@@ -1,0 +1,196 @@
+---
+import { Icon } from 'astro-icon/components'
+import { t } from 'i18n:astro'
+
+interface Props {
+  url?: string
+}
+
+const {
+  url = 'https://wa.me/message/VZOWCP5BYGXJD1'
+} = Astro.props
+
+const { tooltip } = t('whatsapp', {
+  returnObjects: true
+})
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-float"
+  aria-label="Contactar por WhatsApp"
+>
+  <div class="whatsapp-tooltip">
+    {tooltip}
+  </div>
+  <div class="whatsapp-icon-container">
+    <Icon name="whatsapp" size={32} />
+    <span class="notification-badge">1</span>
+  </div>
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  /* Entrance animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .whatsapp-float {
+    animation: slideIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .whatsapp-float:hover .whatsapp-icon-container {
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  }
+
+  /* Pulsing effect */
+  .whatsapp-icon-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #25d366;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+
+  .notification-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: #ff3b30;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-5px);}
+    60% {transform: translateY(-3px);}
+  }
+
+  .whatsapp-tooltip {
+    background-color: white;
+    color: #444;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    position: relative;
+    visibility: hidden;
+  }
+
+  /* Dark mode support */
+  :global(html.dark) .whatsapp-tooltip {
+    background-color: #1e1e1e;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 6px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+  }
+
+  :global(html.dark) .whatsapp-tooltip::after {
+    border-left-color: #1e1e1e;
+  }
+
+  /* Show tooltip on hover */
+  @media (hover: hover) {
+    .whatsapp-float:hover .whatsapp-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .whatsapp-tooltip {
+      display: none;
+    }
+
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .whatsapp-icon-container {
+      width: 56px;
+      height: 56px;
+    }
+  }
+</style>

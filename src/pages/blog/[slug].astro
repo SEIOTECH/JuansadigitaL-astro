@@ -1,0 +1,133 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '@layouts/Layout.astro'
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog')
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}))
+}
+
+const { post } = Astro.props
+const { Content } = await post.render()
+
+const options = {
+	title: `${post.data.title} | JuansaDigital`,
+	description: post.data.description
+}
+---
+
+<Layout options={options}>
+	<main>
+		<article class="post-content">
+			<header>
+				<time datetime={post.data.pubDate.toISOString()}>
+					{post.data.pubDate.toLocaleDateString('es-ES', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric',
+					})}
+				</time>
+				<h1>{post.data.title}</h1>
+				{post.data.heroImage && (
+					<img src={post.data.heroImage} alt={post.data.title} />
+				)}
+			</header>
+			<section class="content">
+				<Content />
+			</section>
+			<footer>
+				<a href="/blog" class="back-link">← Volver al blog</a>
+			</footer>
+		</article>
+	</main>
+</Layout>
+
+<style is:global>
+	/* Styles for generated markdown content */
+	.post-content .content {
+		color: var(--text-description-color);
+		font-size: 1.125rem;
+		line-height: 1.8;
+
+		& h1, & h2, & h3 {
+			color: var(--text-color);
+			margin-top: 2.5rem;
+			margin-bottom: 1.25rem;
+		}
+
+		& p {
+			margin-bottom: 1.5rem;
+		}
+
+		& ul, & ol {
+			margin-bottom: 1.5rem;
+			padding-left: 1.5rem;
+		}
+
+		& li {
+			margin-bottom: 0.5rem;
+		}
+
+		& strong {
+			color: var(--text-color);
+		}
+
+		& blockquote {
+			border-left: 4px solid var(--text-color);
+			padding-left: 1.5rem;
+			margin-left: 0;
+			font-style: italic;
+		}
+	}
+</style>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 60px auto 120px;
+		padding-inline: var(--mobile-inline-padding);
+	}
+
+	header {
+		margin-bottom: 48px;
+		text-align: center;
+
+		& time {
+			display: block;
+			margin-bottom: 16px;
+			color: var(--text-description-color);
+			font-size: 0.875rem;
+		}
+
+		& h1 {
+			margin-bottom: 32px;
+		}
+
+		& img {
+			width: 100%;
+			border-radius: var(--radius);
+			aspect-ratio: 16 / 9;
+			object-fit: cover;
+		}
+	}
+
+	footer {
+		margin-top: 64px;
+		padding-top: 32px;
+		border-top: 1px solid var(--border-color);
+	}
+
+	.back-link {
+		color: var(--text-color);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.15s ease;
+
+		&:hover {
+			color: var(--text-description-color);
+		}
+	}
+</style>

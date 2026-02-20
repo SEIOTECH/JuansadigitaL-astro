@@ -17,6 +17,10 @@
     {
       "label": "Nosotros",
       "href": "#nosotros"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
     }
   ],
   "hero": {
@@ -169,5 +173,9 @@
       "developed_with": "Hecho con",
       "developed_by": "por JuansaDigital"
     }
+  },
+  "whatsapp": {
+    "tooltip": "¡Hola! 👋 ¿En qué puedo ayudarte?",
+    "message": "Hola! Me gustaría obtener más información."
   }
 }

@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '@layouts/Layout.astro'
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+
+const options = {
+	title: `Blog | JuansaDigital`,
+	description: `Artículos sobre Marketing Digital, Desarrollo Web y Turismo en Santa Marta.`
+}
+---
+
+<Layout options={options}>
+	<main>
+		<header>
+			<h1>Blog</h1>
+			<p class="headline-4">Explora nuestros artículos sobre tecnología y marketing turístico.</p>
+		</header>
+
+		<section class="posts-grid">
+			{
+				posts.map((post) => (
+					<article class="post-card">
+						<a href={`/blog/${post.slug}`}>
+							{post.data.heroImage && (
+								<img src={post.data.heroImage} alt={post.data.title} />
+							)}
+							<div class="content">
+								<h2>{post.data.title}</h2>
+								<p>{post.data.description}</p>
+								<time datetime={post.data.pubDate.toISOString()}>
+									{post.data.pubDate.toLocaleDateString('es-ES', {
+										year: 'numeric',
+										month: 'long',
+										day: 'numeric',
+									})}
+								</time>
+							</div>
+						</a>
+					</article>
+				))
+			}
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 1054px;
+		margin: 60px auto 120px;
+		padding-inline: var(--mobile-inline-padding);
+	}
+
+	header {
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+	h1 {
+		margin-bottom: 16px;
+	}
+
+	.posts-grid {
+		display: grid;
+		gap: 32px;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+
+	.post-card {
+		background-color: var(--bg-card-contributions);
+		border: 1px solid var(--border-color);
+		border-radius: var(--radius);
+		overflow: hidden;
+		transition: transform 0.3s ease, border-color 0.3s ease;
+
+		&:hover {
+			transform: translateY(-8px);
+			border-color: var(--text-color);
+		}
+
+		& a {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+			height: 100%;
+		}
+
+		& img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		& .content {
+			padding: 24px;
+
+			& h2 {
+				font-size: 1.5rem;
+				margin-bottom: 12px;
+				line-height: 1.2;
+			}
+
+			& p {
+				color: var(--text-description-color);
+				font-size: 1rem;
+				margin-bottom: 24px;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+
+			& time {
+				font-size: 0.875rem;
+				color: var(--text-description-color);
+			}
+		}
+	}
+</style>

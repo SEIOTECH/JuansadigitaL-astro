@@ -10,13 +10,18 @@ const links = t('navbar', { returnObjects: true })
 <nav id="menu">
   <ul>
     {
-      links.map(({ label, href }, index) => (
-        <li>
-          <a class:list={{ active: index === 0 }} href={href}>
-            {label}
-          </a>
-        </li>
-      ))
+      links.map(({ label, href }) => {
+        const isActive = Astro.url.pathname === href ||
+                        (href.startsWith('#') && Astro.url.pathname.length <= 4)
+
+        return (
+          <li>
+            <a class:list={{ active: isActive }} href={href}>
+              {label}
+            </a>
+          </li>
+        )
+      })
     }
     <li>
       <a
@@ -44,7 +49,11 @@ const links = t('navbar', { returnObjects: true })
 
 <dialog>
   <nav>
-    {links.map(({ label, href }) => <a href={href}>{label}</a>)}
+    {links.map(({ label, href }) => {
+      const isActive = Astro.url.pathname === href ||
+                      (href.startsWith('#') && Astro.url.pathname.length <= 4)
+      return <a href={href} class:list={{ active: isActive }}>{label}</a>
+    })}
     <a
       class="language"
       href={Astro.url.pathname.includes('/en')
