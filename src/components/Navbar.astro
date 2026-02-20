@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { switchLocalePath, getLocale, t } from 'i18n:astro'
+import { getLocale, t } from 'i18n:astro'
 import ToggleSwitch from '@components/ToggleSwitch.astro'
 
 // Obtenemos los enlaces de la navegación de locales
@@ -12,9 +12,15 @@ const locale = getLocale()
   <ul>
     {
       links.map(({ label, href }) => {
-        const localizedHref = href.startsWith('#') ? href : (locale === 'es' ? href : `/${locale}${href}`)
-        const isActive = Astro.url.pathname === localizedHref ||
-                        (href.startsWith('#') && Astro.url.pathname.length <= 4)
+        const base = locale === 'es' ? '' : `/${locale}`
+        const localizedHref = href.startsWith('#')
+          ? `${base}/${href}`
+          : locale === 'es'
+            ? href
+            : `/${locale}${href}`
+        const isActive =
+          Astro.url.pathname === localizedHref ||
+          (href.startsWith('#') && Astro.url.pathname.length <= 4)
 
         return (
           <li>
@@ -29,8 +35,10 @@ const locale = getLocale()
       <a
         class="language"
         href={Astro.url.pathname.includes('/en')
-          ? switchLocalePath('es')
-          : switchLocalePath('en')}
+          ? Astro.url.pathname.replace('/en', '') || '/'
+          : Astro.url.pathname === '/'
+            ? '/en'
+            : `/en${Astro.url.pathname}`}
       >
         <span>
           <Icon name="language" size={18} />
@@ -51,17 +59,31 @@ const locale = getLocale()
 
 <dialog>
   <nav>
-    {links.map(({ label, href }) => {
-      const localizedHref = href.startsWith('#') ? href : (locale === 'es' ? href : `/${locale}${href}`)
-      const isActive = Astro.url.pathname === localizedHref ||
-                      (href.startsWith('#') && Astro.url.pathname.length <= 4)
-      return <a href={localizedHref} class:list={{ active: isActive }}>{label}</a>
-    })}
+    {
+      links.map(({ label, href }) => {
+        const base = locale === 'es' ? '' : `/${locale}`
+        const localizedHref = href.startsWith('#')
+          ? `${base}/${href}`
+          : locale === 'es'
+            ? href
+            : `/${locale}${href}`
+        const isActive =
+          Astro.url.pathname === localizedHref ||
+          (href.startsWith('#') && Astro.url.pathname.length <= 4)
+        return (
+          <a href={localizedHref} class:list={{ active: isActive }}>
+            {label}
+          </a>
+        )
+      })
+    }
     <a
       class="language"
       href={Astro.url.pathname.includes('/en')
-        ? switchLocalePath('es')
-        : switchLocalePath('en')}
+        ? Astro.url.pathname.replace('/en', '') || '/'
+        : Astro.url.pathname === '/'
+          ? '/en'
+          : `/en${Astro.url.pathname}`}
     >
       <span>
         <Icon name="language" size={18} />

@@ -1,7 +1,7 @@
 ---
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import { getLocale, t } from 'i18n:astro'
+import { Image } from 'astro:assets'
 import Layout from '@layouts/Layout.astro'
 
 const locale = getLocale()
@@ -20,11 +20,9 @@ const options = {
     <header>
       <h1>Blog</h1>
       <p class="headline-4">
-        {
-          locale === 'es'
-            ? 'Explora nuestros artículos sobre tecnología y marketing turístico.'
-            : 'Explore our articles on technology and tourism marketing.'
-        }
+        {locale === 'es'
+          ? 'Explora nuestros artículos sobre tecnología y marketing turístico.'
+          : 'Explore our articles on technology and tourism marketing.'}
       </p>
     </header>
 
@@ -32,33 +30,19 @@ const options = {
       {
         posts.map((post) => (
           <article class="post-card">
-            <a
-              href={
-                locale === 'es'
-                  ? `/blog/${post.slug}`
-                  : `/${locale}/blog/${post.slug}`
-              }
-            >
+            <a href={locale === 'es' ? `/blog/${post.slug}` : `/${locale}/blog/${post.slug}`}>
               {post.data.heroImage && (
-                <Image
-                  src={post.data.heroImage}
-                  alt={post.data.title}
-                  width={400}
-                  height={250}
-                />
+                <Image src={post.data.heroImage} alt={post.data.title} width={400} height={250} />
               )}
               <div class="content">
                 <h2>{post.data.title}</h2>
                 <p>{post.data.description}</p>
                 <time datetime={post.data.pubDate.toISOString()}>
-                  {post.data.pubDate.toLocaleDateString(
-                    locale === 'es' ? 'es-ES' : 'en-US',
-                    {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    }
-                  )}
+                  {post.data.pubDate.toLocaleDateString(locale === 'es' ? 'es-ES' : 'en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
                 </time>
               </div>
             </a>
@@ -97,9 +81,7 @@ const options = {
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
     overflow: hidden;
-    transition:
-      transform 0.3s ease,
-      border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 
     &:hover {
       transform: translateY(-8px);
