@@ -40,24 +40,30 @@ const {
 
 <style>
   .hero {
-    padding-top: 113px;
+    padding-top: 60px;
     padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     @media (width >= 768px) {
-      padding-block: 129px;
+      padding-block: 80px;
+      min-height: calc(100vh - 120px);
     }
 
     & > div {
       position: relative;
+      width: 100%;
       margin-inline: auto;
       text-align: center;
       border: 1px solid var(--border-color);
       border-radius: var(--radius);
-      padding: 120px 29px;
+      padding: 80px 29px;
       overflow: hidden;
 
       @media (width >= 992px) {
-        padding: 148px 125px;
+        padding: 100px 125px;
       }
 
       & canvas {
