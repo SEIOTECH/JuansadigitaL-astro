@@ -1,6 +1,6 @@
 ---
-import { getCollection } from 'astro:content'
 import { Icon } from 'astro-icon/components'
+import { getCollection } from 'astro:content'
 import { getLocale, t } from 'i18n:astro'
 import ToggleSwitch from '@components/ToggleSwitch.astro'
 
@@ -25,11 +25,16 @@ if (pathname.includes('/blog/')) {
     )
 
     if (translatedPost) {
-      translatedPath = translatedPost.data.lang === 'es'
-        ? `/blog/${translatedPost.slug}`
-        : `/en/blog/${translatedPost.slug}`
+      translatedPath =
+        translatedPost.data.lang === 'es'
+          ? `/blog/${translatedPost.slug}`
+          : `/en/blog/${translatedPost.slug}`
     }
   }
+} else if (pathname.includes('/servicios')) {
+  translatedPath = '/en/services'
+} else if (pathname.includes('/services')) {
+  translatedPath = '/servicios'
 }
 ---
 
@@ -59,11 +64,12 @@ if (pathname.includes('/blog/')) {
     <li>
       <a
         class="language"
-        href={translatedPath || (Astro.url.pathname.includes('/en')
-          ? Astro.url.pathname.replace('/en', '') || '/'
-          : Astro.url.pathname === '/'
-            ? '/en'
-            : `/en${Astro.url.pathname}`)}
+        href={translatedPath ||
+          (Astro.url.pathname.includes('/en')
+            ? Astro.url.pathname.replace('/en', '') || '/'
+            : Astro.url.pathname === '/'
+              ? '/en'
+              : `/en${Astro.url.pathname}`)}
       >
         <span>
           <Icon name="language" size={18} />

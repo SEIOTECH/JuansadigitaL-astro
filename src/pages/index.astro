@@ -1,6 +1,5 @@
 ---
 import { t } from 'i18n:astro'
-import { URL } from '@data/constants'
 import Layout from '@layouts/Layout.astro'
 import About from '@pages/_home/About.astro'
 import Contact from '@pages/_home/Contact.astro'
@@ -14,6 +13,7 @@ const options = {
   description: t('common:description')
 }
 ---
+
 <Layout options={options}>
   <main>
     <Hero />
