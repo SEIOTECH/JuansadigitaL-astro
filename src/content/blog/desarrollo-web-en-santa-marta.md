@@ -2,7 +2,7 @@
 title: 'Desarrollo Web en Santa Marta: Crea una Presencia Digital de Alto Impacto'
 description: 'Descubre por qué un sitio web profesional es el motor de tu negocio en Santa Marta. Diseño responsivo, velocidad y optimización para el sector turístico con JuansaDigital.'
 pubDate: 2026-02-24
-heroImage: '../../images/blog/desarrollo web en santa marta.webp'
+heroImage: '../../images/blog/desarrollo web en santa marta juansa digital.webp'
 lang: 'es'
 reference: 'desarrollo-web-santa-marta'
 ---
