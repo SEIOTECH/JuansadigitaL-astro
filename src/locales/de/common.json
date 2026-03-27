@@ -1,0 +1,177 @@
+{
+  "title": "Juansadigital | Professionelles Webdesign & Digitales Marketing, das konvertiert",
+  "description": "Möchten Sie mehr Online-Kunden? Juansadigital entwickelt hochkonvertierende Websites und leistungsstarke digitale Marketingstrategien, um Ihre Sichtbarkeit, Ihren Traffic und Ihre Verkäufe zu steigern. Bringen Sie Ihr Unternehmen noch heute auf die nächste Stufe.",
+  "navbar": [
+    {
+      "label": "Startseite",
+      "href": "#top"
+    },
+    {
+      "label": "Dienstleistungen",
+      "href": "/services"
+    },
+    {
+      "label": "Projekte",
+      "href": "#projects"
+    },
+    {
+      "label": "Über uns",
+      "href": "#about-us"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    }
+  ],
+  "hero": {
+    "job_availability": "Strategist für Tourismusmarketing in Santa Marta",
+    "title": "JuanSa Digital",
+    "job_title": "<strong>Marketingberatung & Webentwicklung</strong> in Santa Marta, Kolumbien.",
+    "description": "Spezialisiert auf die Förderung von Tourismusunternehmen wie Hotels, Reisebüros, Reiseveranstalter und Reiseziele.",
+    "cta": "Kontaktieren Sie mich"
+  },
+  "experience": {
+    "title": "Hauptdienstleistungen",
+    "jobs": {
+      "jobs_title": ["Digitales Marketing", "Webentwicklung", "Marktanalyse"],
+      "jobs_description": [
+        {
+          "title": "Digitales Tourismusmarketing",
+          "time": ["2026"],
+          "description": "Wir entwerfen komplette digitale Strategien für den Tourismussektor. Von Social-Media-Werbekampagnen und Google Ads bis hin zu Content-Management und SEO-Positionierung helfen wir Hotels, Reisebüros und Reiseveranstaltern, ihre Online-Sichtbarkeit zu erhöhen und mehr Buchungen zu generieren.",
+          "list": [
+            "Social-Media-Kampagnen",
+            "Google Ads & SEM",
+            "E-Mail-Marketing",
+            "SEO-Positionierung"
+          ]
+        },
+        {
+          "title": "Webentwicklung für den Tourismus",
+          "time": ["2026"],
+          "description": "Wir erstellen moderne, optimierte und konversionsorientierte Websites für Tourismusunternehmen. Wir entwickeln Plattformen mit responsivem Design, intuitiver Navigation, Buchungssystemintegration und Suchmaschinenoptimierung und kombinieren Kreativität mit modernster Technologie.",
+          "list": [
+            "Responsives Webdesign",
+            "Leistungsoptimierung",
+            "Buchungsintegration",
+            "Technisches SEO"
+          ]
+        },
+        {
+          "title": "Tourismus-Marktanalyse",
+          "time": ["2026"],
+          "description": "Wir führen umfassende Tourismus-Marktanalysen durch, um Wachstumschancen zu identifizieren. Wir bewerten Wettbewerb, Branchentrends, Verbraucherverhalten und Schlüsselmetriken, um effektive Strategien zu definieren, die den Return on Investment maximieren.",
+          "list": [
+            "Wettbewerbsforschung",
+            "Trendanalyse",
+            "Metriken & KPIs",
+            "Wachstumsstrategien"
+          ]
+        }
+      ]
+    }
+  },
+  "projects": {
+    "title": "Erfolgsfälle",
+    "projects": [
+      {
+        "title": "Discoverlaguajira.travel",
+        "description": "Wir haben Discover La Guajira als moderne Website mit WordPress entwickelt, mit einem lebendigen Design und dynamischen Funktionen mit Fokus auf SEO, die die Wüste und Kultur hervorheben.",
+        "image": "/src/images/projects/discover-la-guajira-turismo.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Regierungsprojekt",
+        "codeUrl": "#",
+        "preview": "Website anzeigen",
+        "previewUrl": "https://discoverlaguajira.travel"
+      },
+      {
+        "title": "Visitvalle.travel",
+        "description": "Wir haben Visit Valle als innovative Website mit WordPress und Elementor entwickelt, die Kultur, Musik und magische Orte in einem von Salsa inspirierten Design präsentiert.",
+        "image": "/src/images/projects/visit-valle-turismo.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Regierungsprojekt",
+        "codeUrl": "#",
+        "preview": "Fall anzeigen",
+        "previewUrl": "https://visitvalle.travel"
+      },
+      {
+        "title": "Providenciaisla.travel",
+        "description": "Wir haben Providencia als dynamische WordPress-Website entwickelt, die das Inselleben und die Kultur mit suchmaschinenoptimierten Funktionen und reibungsloser Benutzerfreundlichkeit widerspiegelt.",
+        "image": "/src/images/projects/providencia.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Regierungsprojekt",
+        "codeUrl": "#",
+        "preview": "Fall anzeigen",
+        "previewUrl": "https://providenciaisla.travel"
+      },
+      {
+        "title": "Wiwatour.com",
+        "description": "Wir haben Wiwa Tour als umfassende Reiseplattform entwickelt, die die angestammte Kultur der Sierra Nevada präsentiert. Die Seite bietet ein intuitives Buchungssystem und eindringliche visuelle Geschichten, die für SEO optimiert sind.",
+        "image": "/src/images/projects/wiwa-tour.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Reiseplattform",
+        "codeUrl": "#",
+        "preview": "Website anzeigen",
+        "previewUrl": "https://wiwatour.com"
+      }
+    ]
+  },
+  "contributions": {
+    "title": "Weitere Projekte",
+    "contributions": [
+      {
+        "src": "/src/images/contributions/tornus.png",
+        "alt": "Tornus Agentur",
+        "title": "Tornus.agency",
+        "description": "Wir haben die Tornus-Website als digitales Gesicht einer Placebranding-Agentur und eines Kreativstudios entwickelt, mit Marken-Inhaltsstrategien und Produktionen, die sich auf Identität und Storytelling konzentrieren.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://tornus.agency",
+        "repo_label": "Website anzeigen",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/contributions/chez boaz.png",
+        "alt": "Chez Boaz Tours",
+        "title": "Chezboaztours.com",
+        "description": "Website spezialisiert auf maßgeschneiderte Touren, mit einem eleganten Design und optimiert für internationale Kundenkonvertierung.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://chezboaztours.com/",
+        "repo_label": "Website anzeigen",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/contributions/ciudad perdida.png",
+        "alt": "Verlorene Stadt Santa Marta",
+        "title": "Ciudadperdidasantamarta.com",
+        "description": "Plattform für eines der legendärsten Reiseziele Kolumbiens, mit Schwerpunkt auf Benutzererfahrung und organischer Positionierung.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://ciudadperdidasantamarta.com/",
+        "repo_label": "Website anzeigen",
+        "commits": "#"
+      }
+    ]
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Persönliche Marke, spezialisiert auf Tourismusmarketing und Webentwicklung",
+    "description": "Ich bin ein auf Tourismus spezialisierter Marketingstratege und Webentwickler, der sich der Förderung von Tourismusunternehmen wie Hotels, Reisebüros, Reiseveranstaltern und Reisezielen widmet. Ich bin ein Experte im Entwerfen digitaler Strategien und der Entwicklung von Websites, die die Sichtbarkeit erhöhen, Buchungen generieren und Kunden binden, wobei ich Kreativität, Technologie und tiefes Branchenwissen kombiniere."
+  },
+  "contact": {
+    "title": "Bereit, Ihr Tourismusunternehmen anzukurbeln?",
+    "subtitle": "Kontaktieren Sie uns und lassen Sie uns Ihr Projekt auf die nächste Stufe heben"
+  },
+  "footer": {
+    "designed": {
+      "designed_with": "Entworfen mit",
+      "designed_by": "von"
+    },
+    "developed": {
+      "developed_with": "Gemacht mit",
+      "developed_by": "von JuansaDigital"
+    }
+  },
+  "whatsapp": {
+    "tooltip": "Hallo! 👋 Wie kann ich helfen?",
+    "message": "Hallo! Ich hätte gerne weitere Informationen."
+  }
+}

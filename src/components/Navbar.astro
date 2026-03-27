@@ -12,6 +12,19 @@ const locale = getLocale()
 const pathname = Astro.url.pathname
 let translatedPath = null
 
+let nextLocale = 'en'
+let nextLangLabel = 'English'
+if (locale === 'es') {
+  nextLocale = 'en'
+  nextLangLabel = 'English'
+} else if (locale === 'en') {
+  nextLocale = 'de'
+  nextLangLabel = 'Deutsch'
+} else if (locale === 'de') {
+  nextLocale = 'es'
+  nextLangLabel = 'Español'
+}
+
 if (pathname.includes('/blog/')) {
   const currentSlug = pathname.split('/blog/')[1].replace(/\/$/, '')
   const allPosts = await getCollection('blog')
@@ -21,20 +34,30 @@ if (pathname.includes('/blog/')) {
     const translatedPost = allPosts.find(
       (p) =>
         p.data.reference === currentPost.data.reference &&
-        p.data.lang !== locale
+        p.data.lang === nextLocale
     )
 
     if (translatedPost) {
       translatedPath =
         translatedPost.data.lang === 'es'
           ? `/blog/${translatedPost.slug}`
-          : `/en/blog/${translatedPost.slug}`
+          : `/${translatedPost.data.lang}/blog/${translatedPost.slug}`
+    } else {
+      translatedPath = nextLocale === 'es' ? '/blog' : `/${nextLocale}/blog`
     }
   }
-} else if (pathname.includes('/servicios')) {
-  translatedPath = '/en/services'
-} else if (pathname.includes('/services')) {
-  translatedPath = '/servicios'
+} else if (locale === 'es') {
+  translatedPath = pathname.includes('/servicios')
+    ? '/en/services'
+    : `/en${pathname === '/' ? '' : pathname}`
+} else if (locale === 'en') {
+  translatedPath = pathname.includes('/services')
+    ? '/de/services'
+    : pathname.replace('/en', '/de')
+} else if (locale === 'de') {
+  translatedPath = pathname.includes('/services')
+    ? '/servicios'
+    : pathname.replace('/de', '') || '/'
 }
 ---
 
@@ -62,20 +85,12 @@ if (pathname.includes('/blog/')) {
       })
     }
     <li>
-      <a
-        class="language"
-        href={translatedPath ||
-          (Astro.url.pathname.includes('/en')
-            ? Astro.url.pathname.replace('/en', '') || '/'
-            : Astro.url.pathname === '/'
-              ? '/en'
-              : `/en${Astro.url.pathname}`)}
-      >
+      <a class="language" href={translatedPath}>
         <span>
           <Icon name="language" size={18} />
         </span>
         <span>
-          {Astro.url.pathname.includes('/en') ? 'Español' : 'English'}
+          {nextLangLabel}
         </span>
       </a>
     </li>
@@ -108,19 +123,12 @@ if (pathname.includes('/blog/')) {
         )
       })
     }
-    <a
-      class="language"
-      href={Astro.url.pathname.includes('/en')
-        ? Astro.url.pathname.replace('/en', '') || '/'
-        : Astro.url.pathname === '/'
-          ? '/en'
-          : `/en${Astro.url.pathname}`}
-    >
+    <a class="language" href={translatedPath}>
       <span>
         <Icon name="language" size={18} />
       </span>
       <span>
-        {Astro.url.pathname.includes('/en') ? 'Español' : 'English'}
+        {nextLangLabel}
       </span>
     </a>
     <div>

@@ -19,7 +19,7 @@ export default defineConfig({
   },
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'en'],
+    locales: ['es', 'en', 'de'],
     routing: 'manual'
   },
   compressHTML: false,
@@ -27,7 +27,7 @@ export default defineConfig({
     icon(),
     i18n({
       defaultLocale: 'es',
-      locales: ['es', 'en']
+      locales: ['es', 'en', 'de']
     }),
     sitemap({
       canonicalURL: URL,
@@ -42,7 +42,9 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'es',
         locales: {
-          es: 'es'
+          es: 'es',
+          en: 'en',
+          de: 'de'
         }
       },
       // Remove trailing slash
