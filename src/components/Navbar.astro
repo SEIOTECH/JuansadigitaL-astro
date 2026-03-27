@@ -8,56 +8,66 @@ import ToggleSwitch from '@components/ToggleSwitch.astro'
 const links = t('navbar', { returnObjects: true })
 const locale = getLocale()
 
-// Lógica para detectar si estamos en un post de blog y buscar su traducción
+// Lógica para detectar traducción a cada idioma disponible
 const pathname = Astro.url.pathname
-let translatedPath = null
 
-let nextLocale = 'en'
-let nextLangLabel = 'English'
-if (locale === 'es') {
-  nextLocale = 'en'
-  nextLangLabel = 'English'
-} else if (locale === 'en') {
-  nextLocale = 'de'
-  nextLangLabel = 'Deutsch'
-} else if (locale === 'de') {
-  nextLocale = 'es'
-  nextLangLabel = 'Español'
+let allPosts: any[] = []
+if (pathname.includes('/blog/')) {
+  allPosts = await getCollection('blog')
 }
 
-if (pathname.includes('/blog/')) {
-  const currentSlug = pathname.split('/blog/')[1].replace(/\/$/, '')
-  const allPosts = await getCollection('blog')
-  const currentPost = allPosts.find((p) => p.slug === currentSlug)
+const buildPathForLocale = (targetLocale: string) => {
+  if (pathname.includes('/blog/')) {
+    const currentSlug = pathname.split('/blog/')[1].replace(/\/$/, '')
+    const currentPost = allPosts.find((p) => p.slug === currentSlug)
 
-  if (currentPost?.data.reference) {
-    const translatedPost = allPosts.find(
-      (p) =>
-        p.data.reference === currentPost.data.reference &&
-        p.data.lang === nextLocale
-    )
-
-    if (translatedPost) {
-      translatedPath =
-        translatedPost.data.lang === 'es'
+    if (currentPost?.data.reference) {
+      const translatedPost = allPosts.find(
+        (p) =>
+          p.data.reference === currentPost.data.reference &&
+          p.data.lang === targetLocale
+      )
+      if (translatedPost) {
+        return translatedPost.data.lang === 'es'
           ? `/blog/${translatedPost.slug}`
           : `/${translatedPost.data.lang}/blog/${translatedPost.slug}`
-    } else {
-      translatedPath = nextLocale === 'es' ? '/blog' : `/${nextLocale}/blog`
+      }
     }
+    return targetLocale === 'es' ? '/blog' : `/${targetLocale}/blog`
   }
-} else if (locale === 'es') {
-  translatedPath = pathname.includes('/servicios')
-    ? '/en/services'
-    : `/en${pathname === '/' ? '' : pathname}`
-} else if (locale === 'en') {
-  translatedPath = pathname.includes('/services')
-    ? '/de/services'
-    : pathname.replace('/en', '/de')
-} else if (locale === 'de') {
-  translatedPath = pathname.includes('/services')
-    ? '/servicios'
-    : pathname.replace('/de', '') || '/'
+
+  // Rutas base sin sufijo
+  let nakedPath = pathname
+  if ((locale as string) === 'en')
+    nakedPath = pathname.replace(/^\/en/, '') || '/'
+  if ((locale as string) === 'de')
+    nakedPath = pathname.replace(/^\/de/, '') || '/'
+
+  if (nakedPath === '/servicios' || nakedPath === '/services') {
+    if (targetLocale === 'es') return '/servicios'
+    if (targetLocale === 'en') return '/en/services'
+    if (targetLocale === 'de') return '/de/services'
+  }
+
+  if (targetLocale === 'es') return nakedPath
+  return `/${targetLocale}${nakedPath === '/' ? '' : nakedPath}`
+}
+
+const locales = ['es', 'en', 'de']
+const localeLabels: Record<string, string> = {
+  es: 'ES',
+  en: 'EN',
+  de: 'DE'
+}
+const localeFullNames: Record<string, string> = {
+  es: 'Español',
+  en: 'English',
+  de: 'Deutsch'
+}
+
+const localePaths: Record<string, string> = {}
+for (const loc of locales) {
+  localePaths[loc] = buildPathForLocale(loc)
 }
 ---
 
@@ -84,15 +94,25 @@ if (pathname.includes('/blog/')) {
         )
       })
     }
-    <li>
-      <a class="language" href={translatedPath}>
-        <span>
-          <Icon name="language" size={18} />
-        </span>
-        <span>
-          {nextLangLabel}
-        </span>
-      </a>
+    <li class="language-dropdown">
+      <button class="current-language" aria-label="Cambiar idioma">
+        <Icon name="language" size={18} />
+        <span>{localeLabels[locale]}</span>
+      </button>
+      <ul class="dropdown-menu">
+        {
+          locales.map((loc) => (
+            <li>
+              <a
+                href={localePaths[loc]}
+                class:list={{ active: loc === locale }}
+              >
+                {localeFullNames[loc]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </li>
     <li>
       <ToggleSwitch />
@@ -123,14 +143,21 @@ if (pathname.includes('/blog/')) {
         )
       })
     }
-    <a class="language" href={translatedPath}>
-      <span>
+    <div class="mobile-language-selector">
+      <div class="current-lang-title">
         <Icon name="language" size={18} />
-      </span>
-      <span>
-        {nextLangLabel}
-      </span>
-    </a>
+        <span>Idioma / Language</span>
+      </div>
+      <div class="lang-links">
+        {
+          locales.map((loc) => (
+            <a href={localePaths[loc]} class:list={{ active: loc === locale }}>
+              {localeLabels[loc]}
+            </a>
+          ))
+        }
+      </div>
+    </div>
     <div>
       <ToggleSwitch />
     </div>
@@ -205,13 +232,77 @@ if (pathname.includes('/blog/')) {
             transition: var(--transition-bg);
           }
 
-          & .language {
-            display: flex;
-            align-items: center;
-            gap: 4px;
+          &.language-dropdown {
+            & .current-language {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              color: var(--text-color);
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-family: inherit;
+              font-size: 1rem;
+              padding: 0;
+              transition: var(--transition-text);
+            }
 
-            & span:first-child {
-              line-height: 0;
+            & .dropdown-menu {
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              transform: translate(-50%, 15px);
+              display: flex;
+              flex-direction: column;
+              background-color: var(--bg-secondary-color, var(--bg-color));
+              border: 1px solid var(--border-color);
+              border-radius: 8px;
+              padding: 8px 0;
+              opacity: 0;
+              visibility: hidden;
+              transition: all 0.3s ease;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              z-index: 10;
+              margin: 0;
+              gap: 0;
+              width: max-content;
+            }
+
+            &:hover .dropdown-menu {
+              opacity: 1;
+              visibility: visible;
+              transform: translate(-50%, 25px);
+            }
+
+            & .dropdown-menu li {
+              width: 100%;
+              padding: 0;
+              border: none;
+              &::after {
+                display: none;
+              }
+            }
+
+            & .dropdown-menu a {
+              display: block;
+              padding: 8px 16px;
+              text-align: left;
+              width: 100%;
+              background: none;
+              font-size: 0.9em;
+
+              &.active {
+                opacity: 0.5;
+                pointer-events: none;
+              }
+
+              &:hover {
+                background-color: color-mix(
+                  in srgb,
+                  var(--text-color) 10%,
+                  transparent
+                );
+              }
             }
           }
         }
@@ -332,6 +423,41 @@ if (pathname.includes('/blog/')) {
 
         &:hover {
           color: var(--text-description-color);
+        }
+      }
+
+      & .mobile-language-selector {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+
+        & .current-lang-title {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: var(--text-color);
+          opacity: 0.7;
+          font-size: 0.9rem;
+        }
+
+        & .lang-links {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          & a {
+            padding: 6px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 100px;
+            font-size: 0.9em;
+
+            &.active {
+              background-color: var(--text-color);
+              color: var(--bg-secondary-color, var(--bg-color));
+            }
+          }
         }
       }
     }
