@@ -1,0 +1,181 @@
+{
+  "title": "Juansadigital | Conception Web Professionnelle & Marketing Digital Qui Convertit",
+  "description": "Vous voulez plus de clients en ligne ? Juansadigital conçoit des sites web à fort taux de conversion et de puissantes stratégies de marketing digital pour augmenter votre visibilité, votre trafic et vos ventes. Faites passer votre entreprise au niveau supérieur dès aujourd'hui.",
+  "navbar": [
+    {
+      "label": "Accueil",
+      "href": "#top"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Projets",
+      "href": "#projects"
+    },
+    {
+      "label": "À propos",
+      "href": "#about-us"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    }
+  ],
+  "hero": {
+    "job_availability": "Stratège en Marketing Touristique à Santa Marta",
+    "title": "JuanSa Digital",
+    "job_title": "<strong>Conseil en Marketing & Développement Web</strong> à Santa Marta, Colombie.",
+    "description": "Spécialiste dans le développement d'entreprises touristiques telles que les hôtels, agences de voyages, tour-opérateurs et destinations.",
+    "cta": "Contactez-moi"
+  },
+  "experience": {
+    "title": "Services Principaux",
+    "jobs": {
+      "jobs_title": [
+        "Marketing Digital",
+        "Développement Web",
+        "Analyse de Marché"
+      ],
+      "jobs_description": [
+        {
+          "title": "Marketing Digital Touristique",
+          "time": ["2026"],
+          "description": "Nous concevons des stratégies digitales complètes pour le secteur du tourisme. Des campagnes de publicité sur les réseaux sociaux et Google Ads à la gestion de contenu et au référencement SEO, nous aidons les hôtels, agences de voyages et tour-opérateurs à accroître leur visibilité en ligne et à générer plus de réservations.",
+          "list": [
+            "Campagnes Réseaux Sociaux",
+            "Google Ads & SEM",
+            "Email Marketing",
+            "Référencement SEO"
+          ]
+        },
+        {
+          "title": "Développement Web pour le Tourisme",
+          "time": ["2026"],
+          "description": "Nous créons des sites web modernes, optimisés et axés sur la conversion pour les entreprises touristiques. Nous développons des plateformes avec un design responsive, une navigation intuitive, l'intégration de systèmes de réservation et une optimisation pour les moteurs de recherche, alliant créativité et technologie de pointe.",
+          "list": [
+            "Web Design Responsive",
+            "Optimisation des Performances",
+            "Intégration de Réservation",
+            "SEO Technique"
+          ]
+        },
+        {
+          "title": "Analyse du Marché Touristique",
+          "time": ["2026"],
+          "description": "Nous réalisons des analyses approfondies du marché touristique pour identifier les opportunités de croissance. Nous évaluons la concurrence, les tendances du secteur, le comportement des consommateurs et les indicateurs clés pour définir des stratégies efficaces qui maximisent le retour sur investissement.",
+          "list": [
+            "Étude de la Concurrence",
+            "Analyse des Tendances",
+            "Indicateurs & KPIs",
+            "Stratégies de Croissance"
+          ]
+        }
+      ]
+    }
+  },
+  "projects": {
+    "title": "Cas de Succès",
+    "projects": [
+      {
+        "title": "Discoverlaguajira.travel",
+        "description": "Nous avons développé Discover La Guajira comme un site web moderne en utilisant WordPress, avec un design vibrant et des fonctionnalités dynamiques axées sur le SEO qui mettent en valeur le désert et la culture.",
+        "image": "/src/images/projects/discover-la-guajira-turismo.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Projet Gouvernemental",
+        "codeUrl": "#",
+        "preview": "Voir le Site",
+        "previewUrl": "https://discoverlaguajira.travel"
+      },
+      {
+        "title": "Visitvalle.travel",
+        "description": "Nous avons développé Visit Valle comme un site web innovant avec WordPress et Elementor, mettant en valeur la culture, la musique et les villes magiques avec un design inspiré de la salsa.",
+        "image": "/src/images/projects/visit-valle-turismo.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Projet Gouvernemental",
+        "codeUrl": "#",
+        "preview": "Voir le Cas",
+        "previewUrl": "https://visitvalle.travel"
+      },
+      {
+        "title": "Providenciaisla.travel",
+        "description": "Nous avons développé Providencia comme un site WordPress dynamique, reflétant la vie et la culture de l'île avec des fonctions optimisées pour les moteurs de recherche et une utilisabilité fluide.",
+        "image": "/src/images/projects/providencia.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Projet Gouvernemental",
+        "codeUrl": "#",
+        "preview": "Voir le Cas",
+        "previewUrl": "https://providenciaisla.travel"
+      },
+      {
+        "title": "Wiwatour.com",
+        "description": "Nous avons développé Wiwa Tour comme une plateforme de voyage complète mettant en valeur la culture ancestrale de la Sierra Nevada. Le site dispose d'un système de réservation intuitif et d'une narration visuelle immersive optimisée pour le SEO.",
+        "image": "/src/images/projects/wiwa-tour.png",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "code": "Plateforme de Voyage",
+        "codeUrl": "#",
+        "preview": "Voir le Site",
+        "previewUrl": "https://wiwatour.com"
+      }
+    ]
+  },
+  "contributions": {
+    "title": "Plus de Projets",
+    "contributions": [
+      {
+        "src": "/src/images/contributions/tornus.png",
+        "alt": "Agence Tornus",
+        "title": "Tornus.agency",
+        "description": "Nous avons développé le site de Tornus comme visage numérique d'une agence de placebranding et d'un studio créatif, avec des stratégies de contenu de marque et une production axée sur l'identité et le storytelling.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://tornus.agency",
+        "repo_label": "Voir le Site",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/contributions/chez boaz.png",
+        "alt": "Chez Boaz Tours",
+        "title": "Chezboaztours.com",
+        "description": "Site web spécialisé dans les visites sur mesure, avec un design élégant et optimisé pour la conversion de clients internationaux.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://chezboaztours.com/",
+        "repo_label": "Voir le Site",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/contributions/ciudad perdida.png",
+        "alt": "Cité Perdue Santa Marta",
+        "title": "Ciudadperdidasantamarta.com",
+        "description": "Plateforme dédiée à l'une des destinations les plus emblématiques de Colombie, axée sur l'expérience utilisateur et le positionnement organique.",
+        "techs": ["WordPress", "JetEngine", "Elementor", "SEO"],
+        "repo": "https://ciudadperdidasantamarta.com/",
+        "repo_label": "Voir le Site",
+        "commits": "#"
+      }
+    ]
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Marque Personnelle spécialisée en Marketing Touristique et Développement Web",
+    "description": "Je suis un stratège en marketing et développeur web spécialisé dans le tourisme, dédié à la stimulation d'entreprises touristiques telles que les hôtels, agences de voyages, tour-opérateurs et destinations. Je suis expert dans la conception de stratégies digitales et le développement de sites web qui augmentent la visibilité, génèrent des réservations et fidélisent les clients, alliant créativité, technologie et une connaissance approfondie du secteur."
+  },
+  "contact": {
+    "title": "Prêt à dynamiser votre entreprise touristique ?",
+    "subtitle": "Contactez-nous et portons votre projet au niveau supérieur"
+  },
+  "footer": {
+    "designed": {
+      "designed_with": "Conçu avec",
+      "designed_by": "par"
+    },
+    "developed": {
+      "developed_with": "Fait avec",
+      "developed_by": "par JuansaDigital"
+    }
+  },
+  "whatsapp": {
+    "tooltip": "Bonjour ! 👋 Comment puis-je vous aider ?",
+    "message": "Bonjour ! Je souhaiterais obtenir plus d'informations."
+  }
+}

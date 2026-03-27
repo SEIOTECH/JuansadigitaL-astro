@@ -42,27 +42,32 @@ const buildPathForLocale = (targetLocale: string) => {
     nakedPath = pathname.replace(/^\/en/, '') || '/'
   if ((locale as string) === 'de')
     nakedPath = pathname.replace(/^\/de/, '') || '/'
+  if ((locale as string) === 'fr')
+    nakedPath = pathname.replace(/^\/fr/, '') || '/'
 
   if (nakedPath === '/servicios' || nakedPath === '/services') {
     if (targetLocale === 'es') return '/servicios'
     if (targetLocale === 'en') return '/en/services'
     if (targetLocale === 'de') return '/de/services'
+    if (targetLocale === 'fr') return '/fr/services'
   }
 
   if (targetLocale === 'es') return nakedPath
   return `/${targetLocale}${nakedPath === '/' ? '' : nakedPath}`
 }
 
-const locales = ['es', 'en', 'de']
+const locales = ['es', 'en', 'de', 'fr']
 const localeLabels: Record<string, string> = {
   es: 'ES',
   en: 'EN',
-  de: 'DE'
+  de: 'DE',
+  fr: 'FR'
 }
 const localeFullNames: Record<string, string> = {
   es: 'Español',
   en: 'English',
-  de: 'Deutsch'
+  de: 'Deutsch',
+  fr: 'Français'
 }
 
 const localePaths: Record<string, string> = {}
